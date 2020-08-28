@@ -1,0 +1,9 @@
+name: ci
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install and test
+      run: sh ci/docker_stage.sh ci/python_package.sh
