@@ -16,4 +16,4 @@ docker exec \
   sh "$@"
 
 docker stop $container_name
-docker rm $container_name
+docker rm -f $container_name

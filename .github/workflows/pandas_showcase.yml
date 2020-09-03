@@ -1,0 +1,9 @@
+name: pandas_showcase
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Pandas Showcase
+      run: sh ci/docker_stage.sh ci/pandas_showcase.sh
