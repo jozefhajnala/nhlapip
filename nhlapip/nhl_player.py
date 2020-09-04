@@ -4,7 +4,8 @@ from .const import NHLAPI_BASEURL
 class Player(NhlUrl):
     def __init__(self, id):
         super().__init__(endpoint = "people", suffixes = id)
-        self.playerId = int(id)
+        self.playerId = id
+        self.data = None
         self.stats = None
 
     def get_data(self):

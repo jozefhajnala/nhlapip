@@ -15,7 +15,7 @@ class TestPlayer(unittest.TestCase):
        pl = Player("8451101")
        pl.get_data()
        self.assertIsInstance(pl.data, dict)
-       self.assertEqual(pl.data["id"], pl.playerId)
+       self.assertEqual(str(pl.data["id"]), pl.playerId)
        self.assertEqual(pl.data["fullName"], "Joe Sakic")
 
     def test_player_get_stats_allseasons(self):
