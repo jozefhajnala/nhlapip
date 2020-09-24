@@ -11,7 +11,7 @@ class Player(NhlUrl):
     def get_data(self):
          super().get_data()
          self.data = self.data["people"][0]
-         self.data
+         return self.data
 
     def get_stats_allseasons(self):
         self.stats = NhlUrl(
@@ -19,5 +19,3 @@ class Player(NhlUrl):
             suffixes = [self.playerId, "stats"],
             params = {"stats": "yearByYear"}
         ).get_data()["stats"][0]["splits"]
-
-

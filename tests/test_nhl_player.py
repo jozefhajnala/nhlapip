@@ -13,7 +13,8 @@ class TestPlayer(unittest.TestCase):
 
     def test_player_getdata(self):
        pl = Player("8451101")
-       pl.get_data()
+       dt = pl.get_data()
+       self.assertEqual(dt["fullName"], "Joe Sakic")
        self.assertIsInstance(pl.data, dict)
        self.assertEqual(str(pl.data["id"]), pl.playerId)
        self.assertEqual(pl.data["fullName"], "Joe Sakic")
