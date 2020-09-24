@@ -1,0 +1,9 @@
+name: cli_showcase
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: CLI Showcase
+      run: sh ci/docker_stage.sh ci/cli_showcase.sh
