@@ -1,6 +1,6 @@
 import unittest
-from nhlapip.nhl_url import NhlUrl
-from nhlapip.nhl_game import Game
+from nhlapip.url import NhlUrl
+from nhlapip.game import Game
 from nhlapip.const import NHLAPI_BASEURL
 
 class TestGame(unittest.TestCase):

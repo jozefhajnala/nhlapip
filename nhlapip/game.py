@@ -1,4 +1,4 @@
-from .nhl_url import NhlUrl
+from .url import NhlUrl
 from .const import NHLAPI_BASEURL
 
 class Game(NhlUrl):

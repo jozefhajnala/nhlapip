@@ -1,4 +1,4 @@
-from .nhl_url import NhlUrl
+from .url import NhlUrl
 
 class MdEndpoint(NhlUrl):
     def __init__(self, endpoint):

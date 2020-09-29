@@ -1,7 +1,7 @@
-from nhlapip.nhl_player import Player
-from nhlapip.nhl_game import Game
-from nhlapip.nhl_md_endpoints import *
-from nhlapip.nhl_minor_endpoints import *
+from nhlapip.player import Player
+from nhlapip.game import Game
+from nhlapip.md_endpoints import *
+from nhlapip.minor_endpoints import *
 import pandas as pd
 
 # Player Data

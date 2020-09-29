@@ -1,4 +1,4 @@
-from .nhl_url import NhlUrl
+from .url import NhlUrl
 
 class MinorEndpoint(NhlUrl):
     def __init__(self, endpoint, id = None, elName = None):

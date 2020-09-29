@@ -1,5 +1,5 @@
 import unittest
-from nhlapip.nhl_url import NhlUrl
+from nhlapip.url import NhlUrl
 from nhlapip.const import NHLAPI_BASEURL
 
 class TestNhlUrl(unittest.TestCase):

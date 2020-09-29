@@ -1,7 +1,7 @@
 import sys
-from .nhl_player import Player
-from .nhl_md_endpoints import *
-from .nhl_minor_endpoints import *
+from .player import Player
+from .md_endpoints import *
+from .minor_endpoints import *
 
 def processArgs(args):
     print(args)

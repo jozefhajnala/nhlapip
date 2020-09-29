@@ -1,5 +1,5 @@
 import unittest
-from nhlapip.nhl_minor_endpoints import *
+from nhlapip.minor_endpoints import *
 from nhlapip.const import NHLAPI_BASEURL
 
 class TestDivisions(unittest.TestCase):

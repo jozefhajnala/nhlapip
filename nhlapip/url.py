@@ -1,5 +1,5 @@
 from .const import NHLAPI_BASEURL
-from .nhl_get_data import nhl_get_data_worker
+from .get_data import nhl_get_data_worker
 
 class NhlUrl:
     

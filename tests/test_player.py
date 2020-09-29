@@ -1,5 +1,5 @@
 import unittest
-from nhlapip.nhl_player import Player
+from nhlapip.player import Player
 from nhlapip.const import NHLAPI_BASEURL
 
 class TestPlayer(unittest.TestCase):

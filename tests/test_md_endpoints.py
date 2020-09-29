@@ -1,5 +1,5 @@
 import unittest
-from nhlapip.nhl_md_endpoints import *
+from nhlapip.md_endpoints import *
 from nhlapip.const import NHLAPI_BASEURL
 
 class TestGameTypesMd(unittest.TestCase):
