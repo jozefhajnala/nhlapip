@@ -35,4 +35,3 @@ class Game(NhlUrl):
     def get_content(self):
         self.content = self.create_game_element("content")
         self.content.get_data()
-

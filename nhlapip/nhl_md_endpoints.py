@@ -1,5 +1,4 @@
 from .nhl_url import NhlUrl
-from .const import NHLAPI_BASEURL
 
 class MdEndpoint(NhlUrl):
     def __init__(self, endpoint):
