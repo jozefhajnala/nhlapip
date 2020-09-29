@@ -11,3 +11,9 @@ python -m nhlapip Player 8451101 8451102
 
 echo '\n\nRun nhlapip for PlayTypesMd :\n'
 python -m nhlapip PlayTypesMd
+
+echo '\n\nRun nhlapip for Awards :\n'
+python -m nhlapip Awards
+
+echo '\n\nRun nhlapip for Stanley Cup :\n'
+python -m nhlapip Awards 1
