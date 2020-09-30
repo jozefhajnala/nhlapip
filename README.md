@@ -6,11 +6,11 @@
 
 ### Major endpoints
 
-- [ ] Teams
-    - [ ] Team Metadata ``
-    - [ ] Team Rosters ``
-    - [ ] Team Schedules ``
-    - [ ] Team Stats ``
+- [x] Teams
+    - [x] Team Metadata `Team().get_data()`
+    - [x] Team Rosters `Team().get_roster()`
+    - [x] Team Schedules `Team().get_schedule_next()`, `Team().get_schedule_previous()`
+    - [x] Team Stats `Team().get_stats()`
     
 - [x] People (`Player`)
     - [x] Players metadata `Player.get_data()`
@@ -37,13 +37,13 @@
 
 ### Minor endpoints
 
-- [x] Divisions `nhl_divisions()`
-- [x] Conferences `nhl_conferences()`
-- [x] Drafts `nhl_drafts()`
-- [x] Seasons `nhl_seasons()`
-- [x] Awards `nhl_awards()`
-- [x] Venues `nhl_venues()`
-- [x] Draft prospects `nhl_draft_prospects()`
+- [x] Divisions `Divisions()`
+- [x] Conferences `Conferences()`
+- [x] Drafts `Drafts()`
+- [x] Seasons `Seasons()`
+- [x] Awards `Awards()`
+- [x] Venues `Venues()`
+- [x] Draft prospects `DraftProspects()`
 
 ### Metadata endpoints
 

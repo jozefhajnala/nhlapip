@@ -1,8 +1,49 @@
 from nhlapip.player import Player
 from nhlapip.game import Game
+from nhlapip.team import Team
 from nhlapip.md_endpoints import *
 from nhlapip.minor_endpoints import *
 import pandas as pd
+
+# One team
+team = Team(1)
+
+team.get_data()
+print(pd.json_normalize(team.data))
+
+team.get_roster()
+print(pd.json_normalize(team.roster))
+
+team.get_roster(season="19931994")
+print(pd.json_normalize(team.roster))
+
+team.get_schedule_previous()
+print(pd.json_normalize(team.schedulePrevious))
+
+team.get_stats()
+print(pd.json_normalize(team.stats))
+
+team.get_stats(season="19931994")
+print(pd.json_normalize(team.stats))
+
+
+# All Teams
+all_teams = Team()
+all_teams.get_data()
+print(pd.json_normalize(all_teams.data))
+
+all_teams.get_roster()
+print(pd.json_normalize(all_teams.roster))
+
+all_teams.get_roster(season="19931994")
+print(pd.json_normalize(all_teams.roster))
+
+all_teams.get_schedule_previous()
+print(pd.json_normalize(all_teams.schedulePrevious))
+
+all_teams.get_schedule_next()
+print(pd.json_normalize(all_teams.scheduleNext))
+
 
 # Player Data
 sakic = Player('8451101')
@@ -20,7 +61,8 @@ game = Game("2017010001")
 game.get_linescore()
 print(pd.json_normalize(game.linescore.data["periods"]))
 game.get_feed()
-print(pd.json_normalize(game.feed.data["liveData"]["plays"]["allPlays"]))
+plays = game.feed.data["liveData"]["plays"]["allPlays"]
+print(pd.json_normalize(plays))
 
 # Game Types metadata
 game_types = GameTypesMd()

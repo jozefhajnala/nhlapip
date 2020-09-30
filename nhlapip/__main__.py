@@ -1,5 +1,6 @@
 import sys
 from .player import Player
+from .team import Team
 from .md_endpoints import *
 from .minor_endpoints import *
 
@@ -30,7 +31,6 @@ def main():
     else:
         instancelist = [constructor(i) for i in args[1]]
         [print(x.get_data()) for x in instancelist]
-        [print(x.data) for x in instancelist]
 
     return True
 

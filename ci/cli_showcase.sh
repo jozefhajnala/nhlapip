@@ -17,3 +17,12 @@ python -m nhlapip Awards
 
 echo '\n\nRun nhlapip for Stanley Cup :\n'
 python -m nhlapip Awards 1
+
+echo '\n\nRun nhlapip for Teams :\n'
+python -m nhlapip Team
+
+echo '\n\nRun nhlapip for 1 Team :\n'
+python -m nhlapip Team 1
+
+echo '\n\nRun nhlapip for 2 Teams :\n'
+python -m nhlapip Team 1 2
