@@ -2,9 +2,27 @@ from nhlapip.player import Player
 from nhlapip.game import Game
 from nhlapip.team import Team
 from nhlapip.tournament import Tournament
+from nhlapip.schedule import Schedule
 from nhlapip.md_endpoints import *
 from nhlapip.minor_endpoints import *
 import pandas as pd
+
+# Schedules
+schedule = Schedule()
+print(pd.json_normalize(schedule.get_data()))
+
+schedule = Schedule(season="19931994")
+print(pd.json_normalize(schedule.get_data()))
+
+# List of matches per team
+schedule = Schedule(season="19931994", teamId="1", expand="schedule.linescore")
+print(pd.json_normalize(schedule.get_data()))
+
+# Details on games on a particular date
+schedule = Schedule(startDate="2018-01-02", endDate="2018-01-02")
+schedule.get_data()
+print(pd.json_normalize(schedule.data[0]["games"]))
+
 
 # Tournaments
 tournament = Tournament(type="playoffs")

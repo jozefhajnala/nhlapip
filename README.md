@@ -27,11 +27,8 @@
     - [x] Olympics `Tournament("olympics")`
     - [x] World Cups `Tournament("worldcup")`
     
-- [ ] Schedule
-    - [ ] Generic API with all parameters `nhl_schedule()`
-    - [ ] Today `nhl_schedule_today()`
-    - [ ] Custom seasons `nhl_schedule_seasons()`
-    - [ ] Custom date ranges `nhl_schedule_date_range()`
+- [x] Schedule
+    - [x] Generic API with all parameters `Schedule()`
 
 - [ ] Standings `nhl_standings()`
 
