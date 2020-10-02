@@ -22,10 +22,10 @@
     - [x] Games box score info `Game.get_boxscore()`
     - [x] Games line score info `Game.get_linescore()`
 
-- [ ] Tournaments
-    - [ ] Playoffs `nhl_tournaments_playoffs()`
-    - [ ] Olympics `nhl_tournaments_olympics()`
-    - [ ] World Cups `nhl_tournaments_worldcups()`
+- [x] Tournaments
+    - [x] Playoffs `Tournament("playoffs")`
+    - [x] Olympics `Tournament("olympics")`
+    - [x] World Cups `Tournament("worldcup")`
     
 - [ ] Schedule
     - [ ] Generic API with all parameters `nhl_schedule()`

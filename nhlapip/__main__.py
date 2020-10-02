@@ -1,6 +1,7 @@
 import sys
 from .player import Player
 from .team import Team
+from .tournament import Tournament
 from .md_endpoints import *
 from .minor_endpoints import *
 
@@ -14,6 +15,8 @@ def processArgs(args):
         return False
     else:
         endpoint = args[1]
+        # TODO: This needs to be endpoint-specific
+        # e.g for Tournaments() we need suffixes
         ids = args[2:]
         return (endpoint, ids)
 

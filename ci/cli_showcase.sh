@@ -26,3 +26,9 @@ python -m nhlapip Team 1
 
 echo '\n\nRun nhlapip for 2 Teams :\n'
 python -m nhlapip Team 1 2
+
+echo '\n\nRun nhlapip for current playoffs :\n'
+python -m nhlapip Tournament playoffs
+
+echo '\n\nRun nhlapip for current olympics :\n'
+python -m nhlapip Tournament olympics

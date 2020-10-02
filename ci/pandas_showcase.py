@@ -1,9 +1,21 @@
 from nhlapip.player import Player
 from nhlapip.game import Game
 from nhlapip.team import Team
+from nhlapip.tournament import Tournament
 from nhlapip.md_endpoints import *
 from nhlapip.minor_endpoints import *
 import pandas as pd
+
+# Tournaments
+tournament = Tournament(type="playoffs")
+print(pd.json_normalize(tournament.get_data()))
+
+tournament = Tournament(type="playoffs", season="19961997")
+print(pd.json_normalize(tournament.get_data()))
+
+tournament = Tournament(type="playoffs", season="19961997", expand="round.series")
+tournament.get_data()
+print(pd.json_normalize(tournament.data["rounds"]))
 
 # One team
 team = Team(1)
