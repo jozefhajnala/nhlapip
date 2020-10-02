@@ -3,9 +3,24 @@ from nhlapip.game import Game
 from nhlapip.team import Team
 from nhlapip.tournament import Tournament
 from nhlapip.schedule import Schedule
+from nhlapip.standings import Standings
 from nhlapip.md_endpoints import *
 from nhlapip.minor_endpoints import *
 import pandas as pd
+
+# Standings
+standings = Standings()
+print(pd.json_normalize(standings.get_data()))
+
+standings = Standings(season="19931994")
+print(pd.json_normalize(standings.get_data()))
+
+standings = Standings(season="19931994", standingsType="byDivision")
+print(pd.json_normalize(standings.get_data()))
+
+standings = Standings(season="19931994", expand="standings.record")
+print(pd.json_normalize(standings.get_data()))
+
 
 # Schedules
 schedule = Schedule()

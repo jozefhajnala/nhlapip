@@ -11,7 +11,7 @@
     - [x] Team Rosters `Team().get_roster()`
     - [x] Team Schedules `Team().get_schedule_next()`, `Team().get_schedule_previous()`
     - [x] Team Stats `Team().get_stats()`
-    
+
 - [x] People (`Player`)
     - [x] Players metadata `Player.get_data()`
     - [x] Players all season stats `Player.get_stats_allseasons()`
@@ -26,11 +26,11 @@
     - [x] Playoffs `Tournament("playoffs")`
     - [x] Olympics `Tournament("olympics")`
     - [x] World Cups `Tournament("worldcup")`
-    
+
 - [x] Schedule
     - [x] Generic API with all parameters `Schedule()`
 
-- [ ] Standings `nhl_standings()`
+- [x] Standings `Standings()`
 
 ### Minor endpoints
 

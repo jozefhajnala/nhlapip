@@ -35,3 +35,6 @@ python -m nhlapip Tournament olympics
 
 echo '\n\nRun nhlapip for season schedule :\n'
 python -m nhlapip Schedule 19931994
+
+echo '\n\nRun nhlapip for season stadings :\n'
+python -m nhlapip Standings 19931994
