@@ -16,7 +16,7 @@ class TestDivisions(unittest.TestCase):
        divisions.get_data()
        self.assertIsInstance(divisions.data, list)
        self.assertTrue(len(divisions.data) > 3)
-   
+
     def test_divisions_getdata_one_division(self):
        divisions = Divisions(15)
        divisions.get_data()
@@ -38,7 +38,7 @@ class TestConferences(unittest.TestCase):
        conferences.get_data()
        self.assertIsInstance(conferences.data, list)
        self.assertTrue(len(conferences.data) > 1)
-   
+
     def test_conferences_getdata_one_conference(self):
        conferences = Conferences(5)
        conferences.get_data()
@@ -60,7 +60,7 @@ class TestDrafts(unittest.TestCase):
        drafts = Drafts()
        drafts.get_data()
        self.assertIsInstance(drafts.data, list)
-   
+
     def test_drafts_getdata_one_year(self):
        drafts = Drafts(2019)
        drafts.get_data()
@@ -81,7 +81,7 @@ class TestSeasons(unittest.TestCase):
        seasons = Seasons()
        seasons.get_data()
        self.assertIsInstance(seasons.data, list)
-   
+
     def test_seasons_getdata_one_season(self):
        seasons = Seasons("20182019")
        seasons.get_data()
@@ -103,7 +103,7 @@ class TestVenues(unittest.TestCase):
        venues.get_data()
        self.assertIsInstance(venues.data, list)
        self.assertTrue(len(venues.data) > 15)
-   
+
     def test_venues_getdata_one_venue(self):
        venues = Venues(5017)
        venues.get_data()
@@ -125,7 +125,7 @@ class TestAwards(unittest.TestCase):
        awards.get_data()
        self.assertIsInstance(awards.data, list)
        self.assertTrue(len(awards.data) > 20)
-   
+
     def test_awards_getdata_one_award(self):
        awards = Awards(1)
        awards.get_data()

@@ -23,4 +23,4 @@ class TestPlayer(unittest.TestCase):
        pl = Player("8451101")
        pl.get_stats_allseasons()
        self.assertIsInstance(pl.stats, list)
-       
+

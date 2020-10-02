@@ -23,7 +23,7 @@ class Game(NhlUrl):
     def get_boxscore(self):
         self.boxscore = self.create_game_element("boxscore")
         self.boxscore.get_data()
-    
+
     def get_linescore(self):
         self.linescore = self.create_game_element("linescore")
         self.linescore.get_data()

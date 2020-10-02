@@ -2,7 +2,7 @@ from .const import NHLAPI_BASEURL
 from .get_data import nhl_get_data_worker
 
 class NhlUrl:
-    
+
     def __init__(self, baseurl = NHLAPI_BASEURL, endpoint = None, suffixes = None, params = None):
         self.baseurl = baseurl
         self.url = baseurl
@@ -11,14 +11,14 @@ class NhlUrl:
         self.params = None
         self.data = None
         self.add_endpoint(endpoint).add_suffixes(suffixes).add_params(params)
-    
+
     def ensure_url_endswith(self, character):
         self.url = self.url if self.url.endswith(character) else self.url + character
         return self
 
     def ensure_url_noendswith(self, character):
         self.url = self.url[:-1] if self.url.endswith(character) else self.url
-        return self  
+        return self
 
     @staticmethod
     def paste(x, sep = ","):
@@ -30,7 +30,7 @@ class NhlUrl:
             return sep.join("{!s}={!s}".format(key,val) for (key,val) in x.items())
         if isinstance(x, list):
             return sep.join(map(str, x))
-        
+
     def add_endpoint(self, endpoint):
         if (endpoint is None):
             return self
@@ -41,23 +41,23 @@ class NhlUrl:
             return self
         else:
             raise Exception("This NhlUrl already has an endpoint: " + self.endpoint)
-    
+
     def add_suffixes(self, suffixes):
         if (suffixes is None):
             return self
         self.ensure_url_endswith("/")
-        
+
         suffix = NhlUrl.paste(suffixes, sep = "/")
         self.suffixes = suffixes
         self.url = self.url + suffix
         return self
-    
+
     def add_params(self, params):
         if (params is None):
             # Nothing to do
             return self
 
-        self.ensure_url_noendswith("/")        
+        self.ensure_url_noendswith("/")
 
         # Doing something, ensure URL is compatible with adding params
         if (self.params is None):

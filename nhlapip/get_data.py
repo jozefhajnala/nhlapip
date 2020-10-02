@@ -1,6 +1,6 @@
 import urllib.request, json
 
-def nhl_get_data_worker(url): 
+def nhl_get_data_worker(url):
     response = urllib.request.urlopen(url)
     data = json.loads(response.read())
     return data
