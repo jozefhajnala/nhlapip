@@ -6,7 +6,7 @@ from nhlapip.const import NHLAPI_BASEURL
 class TestTournament(unittest.TestCase):
 
     def test_tournament_constructor(self):
-        tournament = Tournament(type = "playoffs")
+        tournament = Tournament(tournament_type = "playoffs")
         self.assertEqual(tournament.url, NHLAPI_BASEURL + "tournaments/playoffs")
         self.assertEqual(tournament.endpoint, "tournaments")
         self.assertEqual(tournament.suffixes, "playoffs")
@@ -14,7 +14,7 @@ class TestTournament(unittest.TestCase):
         self.assertEqual(tournament.data, None)
 
     def test_tournament_constructor_with_expand(self):
-        tournament = Tournament(type = "playoffs", expand = "round.series")
+        tournament = Tournament(tournament_type = "playoffs", expand = "round.series")
         self.assertEqual(tournament.url, NHLAPI_BASEURL + "tournaments/playoffs?expand=round.series")
         self.assertEqual(tournament.endpoint, "tournaments")
         self.assertEqual(tournament.suffixes, "playoffs")
@@ -22,7 +22,7 @@ class TestTournament(unittest.TestCase):
         self.assertEqual(tournament.data, None)
 
     def test_tournament_constructor_with_season(self):
-         tournament = Tournament(type = "playoffs", season = "19931994")
+         tournament = Tournament(tournament_type = "playoffs", season = "19931994")
          self.assertEqual(tournament.url, NHLAPI_BASEURL + "tournaments/playoffs?season=19931994")
          self.assertEqual(tournament.endpoint, "tournaments")
          self.assertEqual(tournament.suffixes, "playoffs")
@@ -30,7 +30,7 @@ class TestTournament(unittest.TestCase):
          self.assertEqual(tournament.data, None)
 
     def test_tournament_constructor_with_expand_and_season(self):
-         tournament = Tournament(type = "playoffs", expand = "round.series", season = "19931994")
+         tournament = Tournament(tournament_type = "playoffs", expand = "round.series", season = "19931994")
          self.assertEqual(tournament.url, NHLAPI_BASEURL + "tournaments/playoffs?expand=round.series&season=19931994")
          self.assertEqual(tournament.endpoint, "tournaments")
          self.assertEqual(tournament.suffixes, "playoffs")

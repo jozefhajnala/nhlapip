@@ -1,40 +1,49 @@
+"""Implementations of the minor endpoints."""
 from .url import NhlUrl
 
 class MinorEndpoint(NhlUrl):
-    def __init__(self, endpoint, id = None, elName = None):
-        super().__init__(endpoint = endpoint, suffixes = id)
-        self.elName = elName
+    """Generic minor endpoint."""
+    def __init__(self, endpoint, oid = None, el_name = None):
+        super().__init__(endpoint = endpoint, suffixes = oid)
+        self.el_name = el_name
     def get_data(self):
-        retData = super().get_data()
-        element = self.endpoint if self.elName is None else self.elName
-        retData = retData[element]
-        self.data = retData
-        return retData
+        ret_data = super().get_data()
+        element = self.endpoint if self.el_name is None else self.el_name
+        ret_data = ret_data[element]
+        self.data = ret_data
+        return ret_data
 
 class Conferences(MinorEndpoint):
-    def __init__(self, id = None):
-        super().__init__(endpoint = "conferences", id = id)
+    """Implementation of the conferences endpoint."""
+    def __init__(self, oid = None):
+        super().__init__(endpoint = "conferences", oid = oid)
 
 class Divisions(MinorEndpoint):
-    def __init__(self, id = None):
-        super().__init__(endpoint = "divisions", id = id)
+    """Implementation of the divisions endpoint."""
+    def __init__(self, oid = None):
+        super().__init__(endpoint = "divisions", oid = oid)
 
 class Drafts(MinorEndpoint):
-    def __init__(self, id = None):
-        super().__init__(endpoint = "draft", id = id, elName = "drafts")
+    """Implementation of the drafts endpoint."""
+    def __init__(self, oid = None):
+        super().__init__(endpoint = "draft", oid = oid, el_name = "drafts")
 
 class Seasons(MinorEndpoint):
-    def __init__(self, id = None):
-        super().__init__(endpoint = "seasons", id = id)
+    """Implementation of the seasons endpoint."""
+    def __init__(self, oid = None):
+        super().__init__(endpoint = "seasons", oid = oid)
 
 class Awards(MinorEndpoint):
-    def __init__(self, id = None):
-        super().__init__(endpoint = "awards", id = id)
+    """Implementation of the awards endpoint."""
+    def __init__(self, oid = None):
+        super().__init__(endpoint = "awards", oid = oid)
 
 class Venues(MinorEndpoint):
-    def __init__(self, id = None):
-        super().__init__(endpoint = "venues", id = id)
+    """Implementation of the venues endpoint."""
+    def __init__(self, oid = None):
+        super().__init__(endpoint = "venues", oid = oid)
 
 class DraftProspects(MinorEndpoint):
-    def __init__(self, id = None):
-        super().__init__(endpoint = "draft/prospects", id = id, elName = "prospects")
+    """Implementation of the draft prospects endpoint."""
+    def __init__(self, oid = None):
+        super().__init__(endpoint = "draft/prospects", oid = oid, el_name = "prospects")

@@ -40,13 +40,13 @@ print(pd.json_normalize(schedule.data[0]["games"]))
 
 
 # Tournaments
-tournament = Tournament(type="playoffs")
+tournament = Tournament(tournament_type="playoffs")
 print(pd.json_normalize(tournament.get_data()))
 
-tournament = Tournament(type="playoffs", season="19961997")
+tournament = Tournament(tournament_type="playoffs", season="19961997")
 print(pd.json_normalize(tournament.get_data()))
 
-tournament = Tournament(type="playoffs", season="19961997", expand="round.series")
+tournament = Tournament(tournament_type="playoffs", season="19961997", expand="round.series")
 tournament.get_data()
 print(pd.json_normalize(tournament.data["rounds"]))
 
@@ -63,7 +63,7 @@ team.get_roster(season="19931994")
 print(pd.json_normalize(team.roster))
 
 team.get_schedule_previous()
-print(pd.json_normalize(team.schedulePrevious))
+print(pd.json_normalize(team.schedule_previous))
 
 team.get_stats()
 print(pd.json_normalize(team.stats))
@@ -84,10 +84,10 @@ all_teams.get_roster(season="19931994")
 print(pd.json_normalize(all_teams.roster))
 
 all_teams.get_schedule_previous()
-print(pd.json_normalize(all_teams.schedulePrevious))
+print(pd.json_normalize(all_teams.schedule_previous))
 
 all_teams.get_schedule_next()
-print(pd.json_normalize(all_teams.scheduleNext))
+print(pd.json_normalize(all_teams.schedule_next))
 
 
 # Player Data
@@ -115,7 +115,7 @@ game_types.get_data()
 print(pd.json_normalize(game_types.data))
 
 # Game Statuses metadata
-game_statues = GameStatusesMd()
+game_statues = GameStatusMd()
 game_statues.get_data()
 print(pd.json_normalize(game_statues.data))
 

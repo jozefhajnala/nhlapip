@@ -17,17 +17,17 @@ class TestGameTypesMd(unittest.TestCase):
        self.assertIsInstance(game_types.data, list)
 
 
-class TestGameStatusesMd(unittest.TestCase):
+class TestGameStatusMd(unittest.TestCase):
 
     def test_game_statuses_md_constructor(self):
-       game_statuses = GameStatusesMd()
+       game_statuses = GameStatusMd()
        self.assertEqual(game_statuses.url, NHLAPI_BASEURL + "gameStatus")
        self.assertEqual(game_statuses.endpoint, "gameStatus")
        self.assertEqual(game_statuses.suffixes, None)
        self.assertEqual(game_statuses.data, None)
 
     def test_game_statuses_md_getdata(self):
-       game_statuses = GameStatusesMd()
+       game_statuses = GameStatusMd()
        game_statuses.get_data()
        self.assertIsInstance(game_statuses.data, list)
 

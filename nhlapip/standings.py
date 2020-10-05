@@ -1,6 +1,13 @@
+"""Implementation of the standings endpoint."""
 from .url import NhlUrl
 
 class Standings(NhlUrl):
+    """Standings
+
+    Args:
+        NhlUrl: NhlUrl to be enriched with Standings-specific elements
+    """
+
     def __init__(self, season=None, standingsType=None, expand=None):
         pars = []
         if season is not None:
@@ -16,6 +23,6 @@ class Standings(NhlUrl):
         self.data = None
 
     def get_data(self):
-        retData = super().get_data()["records"]
-        self.data = retData
-        return retData
+        ret_data = super().get_data()["records"]
+        self.data = ret_data
+        return ret_data

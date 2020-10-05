@@ -1,7 +1,14 @@
+"""Implementation of the Tournaments endpoint."""
+
 from .url import NhlUrl
 
 class Tournament(NhlUrl):
-    def __init__(self, type, expand = None, season = None):
+    """Tournament
+
+    Args:
+        NhlUrl: NhlUrl to be enriched with Tournament-specific elements
+    """
+    def __init__(self, tournament_type, expand = None, season = None):
         pars = []
         if expand is not None:
             pars.append("expand=" + expand)
@@ -12,7 +19,7 @@ class Tournament(NhlUrl):
 
         super().__init__(
             endpoint = "tournaments",
-            suffixes = type,
+            suffixes = tournament_type,
             params = pars
         )
         self.data = None

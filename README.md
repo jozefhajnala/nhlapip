@@ -46,7 +46,7 @@
 ### Metadata endpoints
 
 - [x] Game Types `GameTypesMd()`
-- [x] Game Statuses `GameStatusesMd()`
+- [x] Game Statuses `GameStatusMd()`
 - [x] Play Types `PlayTypesMd()`
 - [x] Tournament Types `TournamentTypesMd()`
 - [x] Standings Types `StandingsTypesMd()`

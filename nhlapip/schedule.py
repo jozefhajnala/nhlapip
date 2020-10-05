@@ -1,7 +1,13 @@
+"""Implementation of the Schedule endpoint."""
 from .url import NhlUrl
 
 class Schedule(NhlUrl):
-    def __init__(
+    """Schedule
+
+    Args:
+        NhlUrl: NhlUrl to be enriched with Schedule-specific elements
+    """
+    def __init__( # pylint: disable=too-many-arguments
         self,
         season=None,
         teamId=None,
@@ -30,6 +36,6 @@ class Schedule(NhlUrl):
         self.data = None
 
     def get_data(self):
-        retData = super().get_data()["dates"]
-        self.data = retData
-        return retData
+        ret_data = super().get_data()["dates"]
+        self.data = ret_data
+        return ret_data
