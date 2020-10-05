@@ -3,6 +3,7 @@
 ![Install and Test](https://github.com/jozefhajnala/nhlapip/workflows/ci/badge.svg)
 ![Pandas Showcase](https://github.com/jozefhajnala/nhlapip/workflows/pandas_showcase/badge.svg)
 ![CLI Showcase](https://github.com/jozefhajnala/nhlapip/workflows/cli_showcase/badge.svg)
+![Lint](https://github.com/jozefhajnala/nhlapip/workflows/lint/badge.svg)
 
 ### Major endpoints
 

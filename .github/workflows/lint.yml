@@ -1,0 +1,9 @@
+name: lint
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Lint package
+      run: sh ci/docker_stage.sh ci/python_pylint.sh
