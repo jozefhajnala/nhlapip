@@ -26,3 +26,4 @@ class Player(NhlUrl):
             suffixes = [self.player_id, "stats"],
             params = {"stats": "yearByYear"}
         ).get_data()["stats"][0]["splits"]
+        return self.stats

@@ -13,7 +13,6 @@ from .minor_endpoints import * # pylint: disable=unused-wildcard-import,wildcard
 
 def process_args(args):
     """Processes command line arguments"""
-    print(args)
     if len(args) == 1:
         print("""
           Usage: nhlapip Endpoint [args]
@@ -31,9 +30,9 @@ def main():
     """Retrieves data from NHL API based on a CLI command"""
     args = process_args(sys.argv)
     if not args:
-        return True
+        return 0
 
-    # Obviously make this processing better
+    # Make this processing better
     constructor = globals()[args[0]]
     if len(args[1]) == 0:
         instance = constructor()
@@ -44,7 +43,7 @@ def main():
         for this_instance in instance_list:
             print(this_instance.get_data())
 
-    return True
+    return 0
 
 if __name__ == "__main__":
     main()
